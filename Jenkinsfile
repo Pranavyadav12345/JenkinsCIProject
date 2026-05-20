@@ -8,7 +8,7 @@ pipeline {
 
             steps {
 
-                bat 'java -version'
+                sh 'java -version'
             }
         }
 
@@ -16,7 +16,7 @@ pipeline {
 
             steps {
 
-                bat 'mvn -version'
+                sh 'mvn -version'
             }
         }
 
@@ -24,7 +24,7 @@ pipeline {
 
             steps {
 
-                bat 'mvn clean compile'
+                sh 'mvn clean compile'
             }
         }
 
@@ -32,7 +32,7 @@ pipeline {
 
             steps {
 
-                bat 'mvn test'
+                sh 'mvn test'
             }
         }
 
@@ -40,7 +40,7 @@ pipeline {
 
             steps {
 
-                bat 'mvn package'
+                sh 'mvn package'
             }
         }
     }
