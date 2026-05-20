@@ -2,6 +2,11 @@ pipeline {
 
     agent any
 
+    tools {
+
+        maven 'Maven'
+    }
+
     stages {
 
         stage('Check Java') {
