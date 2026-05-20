@@ -2,19 +2,21 @@ pipeline {
 
     agent any
 
-    tools {
-
-        maven 'Maven'
-        jdk 'Java21'
-    }
-
     stages {
 
-        stage('Clone Repository') {
+        stage('Check Java') {
 
             steps {
 
-                echo 'Cloning GitHub Repository'
+                bat 'java -version'
+            }
+        }
+
+        stage('Check Maven') {
+
+            steps {
+
+                bat 'mvn -version'
             }
         }
 
